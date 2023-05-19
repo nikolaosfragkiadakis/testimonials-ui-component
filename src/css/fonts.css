@@ -1,0 +1,31 @@
+/**
+* This is the fonts stylesheet of the "Testimonials UI Component".
+*
+* Author: NFG | Nikolaos Fragkiadakis
+*
+* Copyright © 2022 NFG | Nikolaos Fragkiadakis
+*/
+@font-face {
+    font-family: JetBrainsMono;
+    src: url( "../../res/fonts/jetbrainsmono/JetBrainsMono-ExtraLight.woff2" );
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url( "../../res/fonts/jetbrainsmono/JetBrainsMono-ExtraLightItalic.woff2" );
+    font-style: italic;
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url( "../../res/fonts/jetbrainsmono/JetBrainsMono-Medium.woff2" );
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url( "../../res/fonts/jetbrainsmono/JetBrainsMono-MediumItalic.woff2" );
+    font-style: italic;
+    font-weight: bold;
+}

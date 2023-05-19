@@ -1,0 +1,87 @@
+<!--
+    This is the home page of this simple "Testimonials UI Component".
+
+    Author: NFG | Nikolaos Fragkiadakis
+
+    Copyright © 2022 NFG | Nikolaos Fragkiadakis
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google" content="notranslate">
+        <meta name="description" content="This is a simple testimonials UI component.">
+        <title>Testimonials UI Component</title>
+        <link rel="stylesheet" href="src/css/fonts.css" type="text/css">
+        <link rel="stylesheet" href="src/css/styles.css" type="text/css">
+        <link rel="icon" href="res/icons/favicon.svg" type="image/svg+xml">
+    </head>
+    <body>
+        <header>
+            <h1>Our clients testimonials</h1>
+            <h2>What they say about us?</h2>
+        </header>
+        <main>
+            <section class="testimonials-block" aria-label="The Testimonials Block.">
+                <div class="testimonials-container">
+                    <ul class="testimonials-collection">
+                        <li class="single-testimonial single-testimonial--active">
+                            <div class="single-testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <cite>Ms. Blind, Creative Director &commat; Blank Space Ltd.</cite>
+                            </div>
+                            <figure class="single-testimonial-image">
+                                <img src="res/images/avatar-1-500x500.jpg" alt="The avatar of Ms. Blind.">
+                            </figure>
+                        </li>
+                        <li class="single-testimonial">
+                            <div class="single-testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <cite>Lady Walker, CTO &commat; 8miles Co.</cite>
+                            </div>
+                            <figure class="single-testimonial-image">
+                                <img src="res/images/avatar-2-500x500.jpg" alt="The avatar of Lady Walker.">
+                            </figure>
+                        </li>
+                        <li class="single-testimonial">
+                            <div class="single-testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <cite>Ms. Certain, UI/UX Designer &commat; Fuzzy Patterns Ltd.</cite>
+                            </div>
+                            <figure class="single-testimonial-image">
+                                <img src="res/images/avatar-3-500x500.jpg" alt="The avatar of Ms. Certain.">
+                            </figure>
+                        </li>
+                        <li class="single-testimonial">
+                            <div class="single-testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <cite>Mrs. Cipher, Senior Software Engineer &commat; Agile DeCod3rs Co.</cite>
+                            </div>
+                            <figure class="single-testimonial-image">
+                                <img src="res/images/avatar-4-500x500.jpg" alt="The avatar of Mrs. Cipher.">
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" name="left-arrow-button" class="testimonials--arrow-button testimonials--arrow-button--left testimonials--arrow-button--inactive" title="View the previous testimonial.">
+                    <img src="res/vectors/chevron-left.svg" alt="Left chevron">
+                </button>
+                <button type="button" name="right-arrow-button" class="testimonials--arrow-button testimonials--arrow-button--right" title="View the next testimonial.">
+                    <img src="res/vectors/chevron-right.svg" alt="Right chevron">
+                </button>
+                <div class="indicators">
+                    <button class="indicator indicator--active" title="Jump to the first testimonial."></button>
+                    <button class="indicator" title="Jump to the second testimonial."></button>
+                    <button class="indicator" title="Jump to the third testimonial."></button>
+                    <button class="indicator" title="Jump to the fourth testimonial."></button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><strong>Copyright &copy; <span id="current-full-year"></span> NFG &verbar; Nikolaos Fragkiadakis. Crafted with passion.</strong></p>
+        </footer>
+        <script src="src/js/current-full-year.js" type="text/javascript"></script>
+        <script src="src/js/testimonials.js" type="text/javascript"></script>
+    </body>
+</html>

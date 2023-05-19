@@ -1,0 +1,312 @@
+/**
+* This is the core stylesheet of the "Testimonials UI Component".
+*
+* Author: NFG | Nikolaos Fragkiadakis
+*
+* Copyright © 2022 NFG | Nikolaos Fragkiadakis
+*/
+
+/* 1. Root variables. */
+:root {
+    /* 1.1 Primary color palette. */
+    --primary-color-light: #F2F4F3;
+    --primary-color-dark: #161925;
+    --accent-color-purple: #22031F;
+    --accent-color-transparent: rgba(255, 255, 255, 0.3);
+    --full-transparency: transparent;
+
+    /* 1.2 Elements color attributes index table. */
+    --main-background-color: var( --primary-color-light );
+    --dark-background-color: var( --primary-color-dark );
+    --purple-background-color: var( --accent-color-purple );
+    --main-text-color: var( --primary-color-dark );
+    --light-text-color: var( --primary-color-light );
+    --selection-background-color: var( --main-background-color );
+    --selection-text-color: var( --main-text-color );
+    --main-border-color: var( --primary-color-light );
+    --transparent-border-color: var( --accent-color-transparent );
+
+    /* 1.3 Font family index table. */
+    --main-font-family: "JetBrainsMono", "Monaco", monospace;
+
+    /* 1.4 Fonts size attribute index table. */
+    --main-font-size: 18px;
+    --small-font-size: 0.8em;
+    --main-header-large-font-size: 3.2em;
+    --main-header-middle-step-font-size: 4vw;
+    --main-header-small-font-size: 2.2em;
+    --sub-header-large-font-size: 1.8em;
+    --sub-header-middle-step-font-size: 2.2vw;
+    --sub-header-small-font-size: 1.3em;
+
+    /* 1.5 Letter spacing attribute index table. */
+    --short-letter-spacing-gap: 0.04em;
+    --long-letter-spacing-gap: 0.08em;
+
+    /* 1.6 Border size attribute index table. */
+    --no-border: none;
+    --main-border-size: 2px;
+    --thick-border-size: 20px;
+
+    /* 1.7 Paddings and margins index table. */
+    --no-padding: 0;
+    --main-box-padding: 2rem;
+    --small-padding-top: 0.5rem;
+
+    --no-margin: 0;
+    --main-box-margin: 2rem;
+    --small-margin: 0.5rem;
+    --regular-margin: 0 0 1rem 0;
+    --small-margin-top: 2rem;
+    --medium-margin-top: 4rem;
+    --small-margin-bottom: 2rem;
+    --medium-margin-bottom: 4rem;
+    --small-margin-left-right: 0 2rem;
+}
+
+/* 2. Core HTML elements default style ( = CSS reset ). */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: var( --selection-text-color );
+    background: var( --selection-background-color );
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+figure {
+    margin: var( --no-margin );
+}
+
+h1,
+h2,
+h3,
+p,
+cite,
+ul,
+li {
+    padding: var( --no-padding );
+}
+
+ul {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var( --main-font-family );
+    font-size: var( --main-font-size );
+    text-shadow: none;
+    text-rendering: optimizeSpeed;
+    color: var( --light-text-color );
+    background: var( --purple-background-color );
+    padding: var( --main-box-padding );
+}
+
+button {
+    font: inherit;
+}
+
+/* 3. Core HTML typography elements default style. */
+h1 {
+    font-size: clamp( var( --main-header-small-font-size ), var( --main-header-middle-step-font-size ), var( --main-header-large-font-size ) );
+}
+
+h2 {
+    font-size: clamp( var( --sub-header-small-font-size ), var( --sub-header-middle-step-font-size ), var( --sub-header-large-font-size ) );
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    letter-spacing: var( --long-letter-spacing-gap );
+}
+
+h2,
+h3 {
+    letter-spacing: var( --short-letter-spacing-gap );
+}
+
+p {
+    margin: var( --regular-margin );
+}
+
+cite {
+    display: inline-block;
+}
+
+cite,
+figcaption {
+    font-size: var( --small-font-size );
+    font-style: italic;
+    margin: var( --regular-margin );
+}
+
+cite::before,
+figcaption::before {
+    content: '\2014';
+    padding-right: 0.2rem;
+}
+
+/* 4. Template partials default style. */
+header,
+main {
+    margin-bottom: var( --medium-margin-bottom );
+}
+
+header::after {
+    content: '';
+    display: block;
+    max-width: 20%;
+    border-bottom: var( --thick-border-size ) dotted var( --transparent-border-color );
+    margin-top: var( --small-margin-top );
+}
+
+header h1 {
+    text-transform: capitalize;
+}
+
+header h2 {
+    font-style: italic;
+}
+
+footer {
+    font-size: var( --small-font-size );
+    font-style: italic;
+    text-align: center;
+    border-top: var( --main-border-size ) solid var( --transparent-border-color );
+    padding: var( --small-padding-top );
+}
+
+/* 5. Custom molecules and atoms default style. */
+.testimonials-block {
+    position: relative;
+    width: 90%;
+    height: clamp( 600px, 100vh, 900px );
+    margin: 0 auto;
+}
+
+.testimonials-container {
+    position: relative;
+    height: 100%;
+    margin: var( --small-margin-left-right );
+    overflow: hidden;
+}
+
+.testimonials-collection {
+    position: relative;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.single-testimonial {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.single-testimonial--active {
+    opacity: 1;
+}
+
+.single-testimonial-text {
+    margin-bottom: var( --medium-margin-bottom );
+}
+
+.single-testimonial-image img {
+    width: 200px;
+    height: 200px;
+    border: var( --thick-border-size ) solid var( --transparent-border-color );
+    border-radius: 50%;
+}
+
+.testimonials--arrow-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50% );
+    background: var( --full-transparency );
+    border: var( --no-border );
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonials--arrow-button img {
+    display: inline-flex;
+    width: 100%;
+}
+
+.testimonials--arrow-button:hover {
+    background: rgba(242, 244, 243, 0.3);
+}
+
+.testimonials--arrow-button:focus {
+    outline: var( --main-border-size ) solid rgba(255, 255, 255, 0.9);
+    transition: all 0s ease;
+}
+
+.testimonials--arrow-button--inactive {
+    display: none;
+}
+
+.testimonials--arrow-button--left {
+    left: -40px;
+}
+
+.testimonials--arrow-button--right {
+    right: -40px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+}
+
+.indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 244, 243, 0.3);
+    border: var( --no-border );
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: var( --small-margin );
+}
+
+.indicator:hover {
+    background: rgba(242, 244, 243, 0.6);
+}
+
+.indicator:focus {
+    background: var( --accent-color-purple );
+    outline: var( --main-border-size ) solid rgba(242, 244, 243, 0.9);
+    transition: all 0s ease;
+}
+
+.indicator--active {
+    width: 50px;
+    background: rgba(242, 244, 243, 0.9);
+}
